@@ -140,7 +140,7 @@ function CreatorFooter() {
             <strong>bottleAI</strong>
           </div>
           <p className="creator-line">
-            关注加加灵，继续看更多 AI 创意设计和品牌页面玩法。
+            用 Codex 做网站，就像把想法说出口，精美页面已经在路上。
           </p>
         </div>
       </div>

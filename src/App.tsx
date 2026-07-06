@@ -190,7 +190,6 @@ function Hero() {
     <section className="hero-section relative min-h-screen overflow-hidden bg-[#f8fbff] text-[#26070c]">
       <div className="cinema-bg absolute inset-0" />
       <div className="ice-lines absolute inset-0" />
-      <Navbar />
 
       <div className="relative z-10 mx-auto grid min-h-screen max-w-7xl items-center gap-10 px-5 pb-20 pt-28 md:grid-cols-[0.96fr_1.04fr] md:px-8 md:pb-16 md:pt-24">
         <div className="relative">
@@ -262,6 +261,7 @@ function Hero() {
 export default function App() {
   return (
     <main className="min-h-screen bg-[#f8fbff] text-[#26070c]">
+      <Navbar />
       <Hero />
 
       <section id="products" className="relative overflow-hidden px-5 py-24 md:px-8">

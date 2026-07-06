@@ -71,35 +71,41 @@ function SnowKingImage({ className = '' }: { className?: string }) {
 
 function Navbar() {
   return (
-    <header className="fixed left-0 right-0 top-0 z-50 px-4 pt-4 md:px-8">
-      <nav className="mx-auto flex max-w-7xl items-center justify-between border border-white/70 bg-white/82 px-4 py-3 text-[#d90416] shadow-[0_18px_60px_rgba(129,13,24,0.12)] backdrop-blur-xl md:px-5">
+    <header className="site-header fixed left-0 right-0 top-0 px-4 md:px-8">
+      <nav className="mx-auto flex max-w-7xl items-center gap-4 px-0 py-3 text-[#d90416] md:px-0">
         <a href="#" className="flex items-center gap-3">
           <LogoMark />
           <span className="text-base font-black tracking-tight md:text-lg">
             蜜雪冰城
           </span>
         </a>
-        <div className="hidden items-center gap-1 text-sm font-bold md:flex">
-          <a className="px-4 py-2 hover:bg-[#d90416] hover:text-white" href="#ip">
+        <div className="ml-auto hidden items-center gap-1 text-sm font-bold md:flex">
+          <a className="px-3 py-2 hover:bg-[#d90416] hover:text-white lg:px-4" href="#ip">
             雪王ip
           </a>
           <a
-            className="px-4 py-2 hover:bg-[#d90416] hover:text-white"
+            className="px-3 py-2 hover:bg-[#d90416] hover:text-white lg:px-4"
             href="#products"
           >
             爆款商品
           </a>
           <a
-            className="px-4 py-2 hover:bg-[#d90416] hover:text-white"
+            className="px-3 py-2 hover:bg-[#d90416] hover:text-white lg:px-4"
             href="#compare"
           >
             品牌优势
           </a>
           <a
-            className="px-4 py-2 hover:bg-[#d90416] hover:text-white"
+            className="px-3 py-2 hover:bg-[#d90416] hover:text-white lg:px-4"
             href="#brand"
           >
             品牌态度
+          </a>
+          <a
+            className="px-3 py-2 hover:bg-[#d90416] hover:text-white lg:px-4"
+            href="#creator"
+          >
+            创作者
           </a>
         </div>
         <a
@@ -110,6 +116,35 @@ function Navbar() {
         </a>
       </nav>
     </header>
+  );
+}
+
+function CreatorFooter() {
+  return (
+    <footer id="creator" className="creator-footer relative overflow-hidden px-5 py-8 md:px-8">
+      <div className="creator-grid absolute inset-0" aria-hidden="true" />
+      <div className="relative mx-auto flex max-w-7xl flex-col gap-6 md:flex-row md:items-center md:justify-between">
+        <div>
+          <p className="text-xs font-black tracking-[0.24em] text-[#d90416]/70">
+            creator credit
+          </p>
+          <h2 className="mt-2 text-2xl font-black leading-none text-[#26070c] md:text-3xl">
+            作者
+            加加灵
+          </h2>
+        </div>
+
+        <div className="creator-panel">
+          <div className="creator-badge">
+            <span>抖音</span>
+            <strong>bottleAI</strong>
+          </div>
+          <p className="creator-line">
+            关注加加灵，继续看更多 AI 创意设计和品牌页面玩法。
+          </p>
+        </div>
+      </div>
+    </footer>
   );
 }
 
@@ -369,6 +404,8 @@ export default function App() {
           </div>
         </div>
       </section>
+
+      <CreatorFooter />
     </main>
   );
 }
